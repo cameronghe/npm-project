@@ -7,11 +7,11 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "99.99.99",  // Non-existent version
-    "lodash": "5.0.0",  // Non-existent major version
-    "non-existent-package": "1.0.0",  // This package doesn't exist
+    "express": "99.99.99",
+    "lodash": "5.0.0",
+    "non-existent-package": "1.0.0",
     "react": "^16.13.1",
-    "react-dom": "^18.0.0"  // Conflicting version with react
+    "react-dom": "^18.0.0"
   },
   "author": "Your Name",
   "license": "MIT"
