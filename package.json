@@ -1,17 +1,16 @@
 {
   "name": "invalid-dependency-test",
   "version": "1.0.0",
-  "description": "A sample project with invalid dependencies to cause errors.",
+  "description": "A sample project with one invalid dependency to cause an error.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "99.99.99",
-    "lodash": "5.0.0",
-    "non-existent-package": "1.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^18.0.0"
+    "express": "^4.17.1",
+    "lodash": "99.99.99",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "author": "Your Name",
   "license": "MIT"
