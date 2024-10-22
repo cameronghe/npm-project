@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "karma-chrome-launcher": "^3.2.0",
-    "rimraf": "^5.0.5"
+    "rimraf": "^6.0.0"
   },
   "sapux": [
     "app/rds-ui",
