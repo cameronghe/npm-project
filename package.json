@@ -1,17 +1,55 @@
 {
-  "name": "invalid-dependency-test",
+  "name": "system",
   "version": "1.0.0",
-  "description": "A sample project with one invalid dependency to cause an error.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
+  "description": "System application using CAP Java",
+  "license": "Apache License Version 2.0",
+  "repository": "https://github.tools.sap/AssetPerformanceManagement/system.git",
   "dependencies": {
-    "express": "^4.17.1",
-    "lodash": "99.99.99",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "async": "3.2.5",
+    "express": "4.20.0",
+    "follow-redirects": "1.15.6",
+    "helmet": "7.1.0",
+    "minimist": "1.2.8",
+    "qs": "6.12.2",
+    "shell": "^0.11.0",
+    "shelljs": "^0.8.5"
   },
-  "author": "Your Name",
-  "license": "MIT"
+  "cds": {
+    "roots": [
+      "db/",
+      "configuration/",
+      "app/"
+    ],
+    "requires": {
+      "db": {
+        "kind": "hana",
+        "model": "*"
+      },
+      "TechnicalObjectService": {
+        "kind": "odata",
+        "model": "srv/external/TechnicalObjectService"
+      }
+    },
+    "features": {
+      "assert_integrity": "db"
+    }
+  },
+  "scripts": {
+    "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
+    "start": "cds run --in-memory?",
+    "java": "mvn spring-boot:run",
+    "copy-csv-data": "node scripts/copy-csv-stable-data.js",
+    "local-build": "npm run copy-csv-data-local",
+    "copy-csv-data-local": "node scripts/copy-csv-local-data.js",
+    "save-test-data-for-sonar": "node scripts/save-test-data-for-sonar.js",
+    "watch": "cds watch"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^3.2.0",
+    "rimraf": "^5.0.5"
+  },
+  "sapux": [
+    "app/rds-ui",
+    "app/system-ui"
+  ]
 }
