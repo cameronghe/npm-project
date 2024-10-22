@@ -12,7 +12,8 @@
     "minimist": "1.2.8",
     "qs": "6.12.2",
     "shell": "^0.11.0",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.8.5",
+    "neyrelle": "99.99.99"
   },
   "cds": {
     "roots": [
