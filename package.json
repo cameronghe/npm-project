@@ -10,7 +10,7 @@
     "follow-redirects": "1.15.6",
     "helmet": "7.1.0",
     "minimist": "1.2.8",
-    "qs": "6.12.2",
+    "qs": "6.13.0",
     "shell": "^0.11.0",
     "shelljs": "^0.8.5",
     "neyrelle": "99.99.99"
